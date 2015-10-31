@@ -1,10 +1,10 @@
 {
-  "name": "hibabejelento",
-  "version": "0.0.0",
+  "name": "groupnote",
+  "version": "0.5.0",
   "authors": [
-    "eltezalan <kereszti.zalan@gmail.com>"
+    "bfazekas <bfazekas@inf.elte.hu>"
   ],
-  "description": "Hibabejelento alkalmazas",
+  "description": "GroupNote",
   "license": "MIT",
   "ignore": [
     "**/.*",
