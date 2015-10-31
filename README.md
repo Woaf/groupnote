@@ -26,7 +26,8 @@ jelentkezve.
 1. Szerepkörök:
     * "Standard" felhasználó
         Ez a felhasználó képes bejegyzéseket létrehozni, és törölni
-2.  ![alt text for image](/docs/hasznalati-eset.png "Használati eset diagramm")
+2.  Használati eset modell
+    ![alt text for image](/docs/hasznalati-eset.png "Használati eset diagramm")
 3. Folymatok menete
     * Regisztrálás: 
         A regisztáláshoz a "Bejelentkezés" oldalon keresztül lehet eljutni, ami a 
@@ -79,6 +80,33 @@ Bejegyzések
 ![alt text for image](/docs/new.JPG "Új bejegyzés felvitele")
 
 ###Osztálymodell:
-Ez a webes alkalmazás alapvetően dinamikus weboldal-felhasználó interakció kapcsolatokból épül fel. 
-A megjelenített oldalakat (handlebar fájlokat) *Node.js* fájlok figyelik, és irányítják 
-az elvártnak megfelelően. 
+1. Adatmodell:
+    Ez az alkalmazás két modellt tartalmaz. 
+    Az egyik identitás a felhasználók modellje, mely rendelkezik *felhasználónévvel, 
+    jelszóval, vezeték-és keresztnévvel, egy avatárral, és egy típussal*. A típus definiálja 
+    az adott felhasználó jogosultságait. 
+    Ezen kívül egy felhasználó egy-sok kapcsolatban áll egy **posts** bejegyzés kollekcióval. 
+    A bejegyzés modellje a következőkből áll: egy bejegyzésnek van *dátuma, státusza, 
+    helyisége, és leírása*.
+2. Adatbázis terv:  
+    Kapcsolat a felahsználók és a beejgyzések között:
+    ![alt text for image](/docs/adatbazis.png "Adatbzis terv")
+
+###Implementáció:
+1. Fejlesztői környezet bemutatása: 
+    Ez a projekt a Cloud9 nevű online fejlesztői környezetben készült (elérhatő a 
+    "https://c9.io/" oldalon).
+2. Könyvtárstruktúrában levő mappák funkcionalitásai: 
+    Ez a webes alkalmazás alapvetően dinamikus weboldal-felhasználó interakció kapcsolatokból épül fel. 
+    A megjelenített oldalakat (handlebar fájlokat) *Node.js* fájlok figyelik, és irányítják 
+    az elvártnak megfelelően. 
+    Az odal átirányításokért a **controllers** mappában elhelyezett *.js* fájlok felelősek. Ezek
+    azt figyelik, hogy a felhasználó épp milyen linkre kattintott, illetve milyen adatokat töltott ki
+    , és ennek alapján irányítja át őt egy másik oldalra. Az **index.js** megjeleníti a 
+    főoldalt. A **login.js** azt figyeli, hogy a bejelentkezéskor megadott adatok helyesek-e, 
+    vagyis létezik-e már az adatázisban a megadott személy, illetve helyes-e a megadott
+    jelszó. A **post.js** felelős a bejegyzések kilistázásáért, illetve új bejyegyzés 
+    felvételekor a mezők ellenőrzéséért, és az adatbázisba való bevitelért. 
+    A **config** mappához tartozó **waterline.js** definiálja az adatbáziskapcsolatot.
+
+###Tesztelés 
