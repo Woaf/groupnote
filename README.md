@@ -1,4 +1,4 @@
-# groupnote
+# GroupNote 
 GroupNote alkalmazás
 
 ## Követelményanalízis
@@ -49,7 +49,7 @@ jelentkezve.
         bejegyzést. Rögzítéskor az oldal visszairányul a bejegyzések listájának oldalára. 
 
 
-##Tervezés
+## Tervezés
 ###Architektúra terv:
 1. Komponens diagramm:
 ![alt text for image](/docs/komponens.png "Komponens diagramm")
@@ -66,7 +66,7 @@ jelentkezve.
     * "/views/posts/list" (Bejegyzések listája)
     * "/views/posts/new" (Új bejegyzés felvitele)
 
-###Felhaszálói felület: 
+### Felhaszálói felület: 
 1. Oldalvázlatok: 
 Főoldal
 ![alt text for image](/docs/index.JPG "Főodal")
@@ -79,7 +79,7 @@ Bejegyzések
 Új bejegyzés
 ![alt text for image](/docs/new.JPG "Új bejegyzés felvitele")
 
-###Osztálymodell:
+### Osztálymodell:
 1. Adatmodell:
     Ez az alkalmazás két modellt tartalmaz. 
     Az egyik identitás a felhasználók modellje, mely rendelkezik *felhasználónévvel, 
@@ -92,7 +92,7 @@ Bejegyzések
     Kapcsolat a felahsználók és a beejgyzések között:
     ![alt text for image](/docs/adatbazis.png "Adatbzis terv")
 
-###Implementáció:
+### Implementáció:
 1. Fejlesztői környezet bemutatása: 
     Ez a projekt a Cloud9 nevű online fejlesztői környezetben készült (elérhatő a 
     "https://c9.io/" oldalon).
@@ -109,4 +109,33 @@ Bejegyzések
     felvételekor a mezők ellenőrzéséért, és az adatbázisba való bevitelért. 
     A **config** mappához tartozó **waterline.js** definiálja az adatbáziskapcsolatot.
 
-###Tesztelés 
+### Tesztelés 
+1. Az alkalmzás helyes működése több szempotnból is tesztelve lett. 
+    + A regisztrációnál az *avatar* mezőn kívül minden információ megadása szükséges, 
+     egyéb esetben nem veszi fel a felhasználót a program. Helyette kiir egy hibát a képernyőre, hogy 
+     további adatok megadására van szükség. 
+    + Sikeres regisztráció után csak a helyesen megadott felhasznűlónév és jelszó 
+     kombinációval lehet belépni a bejegyzések listájához. Egyéb esetben a program hibát jelez a képernyőn.
+    + Egy bejegyzést csak akkor lehet felvinni az adatbázisba, ha a bejegyzés rendelkezik minimum egy karakternyi 
+     helyszín illetve leírás információval, illetve a típus a kilistázott 4 típus közül valamelyik. A típus
+     elgépelése esetén a program hibaüzenetet küld a képernyőre. 
+2. **Zombie.js** tesztfájlok találhatóak a *"/views/test", "/views/login/test", "/models/userTest", és a "/controllers/index.test"* helyeken. 
+
+
+### Felhasználói dokumentáció: 
+1. Az alkalmazás futtatására bármely számítástechnikai eszköz megfelel, amely rendlkezik az alábbi böngészők bármelyikével: 
+    + Google Chrome v.26.0 (és későbbi)
+    + Microsoft Edge v.12.0 (és későbbi)
+    + Internet Explorer v.10.0 (és későbbi)
+    + Mozilla Firefox v.16.0 (és későbbi)
+    + Safari v.6.1 (és későbbi)
+    + Opera v.12.1 (és későbbi)
+
+2. Telepítés lépései: 
+    A GroupNote GITHub oldaláról (*https://github.com/Woaf/groupnote*) le kell tölteni a projektet,
+    majd elindítani egy szervert ami futtatja a **server.js** állományt. Az alkalmazás helyes működéséhez 
+    minden mappára szükség van. 
+
+3. Az alakalmazás elindítása után a program ugyan úgy használható, mint bármely más 
+    webes alkalmazás. A szervernek **szükséges** futtatnia a server.js állományt ahhoz, hogy
+    a program elérhető legyen. 
