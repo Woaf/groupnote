@@ -1,0 +1,104 @@
+{
+  "data": {
+    "post": [],
+    "user": [
+      {
+        "lastname": "Woaf",
+        "firstname": "The Wolf",
+        "username": "woaf",
+        "password": "$2a$10$uFxLJWQLYdUm4TPygRaBAeaZLC4ypCpTMg/waFmhDilw5keAKJCwm",
+        "avatar": "",
+        "role": "standard",
+        "createdAt": "2015-10-31T15:13:18.116Z",
+        "updatedAt": "2015-10-31T15:13:18.116Z",
+        "id": 1
+      }
+    ]
+  },
+  "schema": {
+    "post": {
+      "date": {
+        "type": "datetime"
+      },
+      "status": {
+        "type": "string",
+        "enum": [
+          "newPrivate",
+          "newPublic",
+          "oldPrivate",
+          "oldPublic"
+        ]
+      },
+      "location": {
+        "type": "string"
+      },
+      "description": {
+        "type": "string"
+      },
+      "user": {
+        "type": "integer",
+        "model": "user",
+        "foreignKey": true,
+        "alias": "user"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "user": {
+      "username": {
+        "type": "string",
+        "unique": true
+      },
+      "password": {
+        "type": "string"
+      },
+      "firstname": {
+        "type": "string"
+      },
+      "lastname": {
+        "type": "string"
+      },
+      "avatar": {
+        "type": "string"
+      },
+      "role": {
+        "type": "string",
+        "enum": [
+          "admininstrator",
+          "standard"
+        ],
+        "defaultsTo": "standard"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    }
+  },
+  "counters": {
+    "post": {
+      "id": 1
+    },
+    "user": {
+      "id": 1
+    }
+  }
+}

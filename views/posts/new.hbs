@@ -1,0 +1,52 @@
+<div class="page-header">
+    <h1>Új bejegyzés megosztása</h1>
+    <p>--> Megjegyzés: Ide akrámit kiírhatsz, de a moderátorok állandóan figyelik a falakat.<br>
+    --> A nem megfelelő magatartást mutató bejegyzések következményekkel járhatnak!</p>
+</div>
+
+<form class="form-horizontal" method="post">
+    <fieldset>
+        <legend>Mi jár a fejemben...</legend>
+        <div class="form-group
+            {{#if validationErrors.helyszin}}
+                has-error
+            {{/if}}
+        ">
+            <label for="helyszin" class="col-lg-2 control.label">Helyszín</label>
+            <div class="col-ls-5">
+                <input class="form-control" id="helyszin" name="helyszin" placeholder="" type"text" value"{{data.helyszin}}">
+                {{#if validationErrors.helyszin}}
+                    <span class="help-block">{{validationErrors.helyszin.msg}}</span>
+                {{/if}}
+            </div>
+            <label for="helyszin" class="col-lg-2 control.label">Bejegyzés típusa</label>
+            <div class="col-ls-5">
+                <input class="form-control" id="status" name="status" placeholder="" type"text" value"{{data.status}}">
+                <span>Az alábbiak közül valamelyik:<br>('newPrivate', 'newPublic', 'oldPrivate', 'oldPublic')</span>
+                {{#if validationErrors.status}}
+                    <span class="help-block">{{validationErrors.status.msg}}</span>
+                {{/if}}
+            </div>
+        </div>
+        <div class="form-group
+            {{#if validationErrors.leiras}}
+                has-error
+            {{/if}}
+            ">
+                <label for="leiras" class"col-lg-2 control-label">Bejegyzés</label>
+                <div class="col-lg-5">
+                    <textarea class="form-control" rows="5" id="leiras" name="leiras">{{data.leiras}}</textarea>
+                    {{#if validationErrors.leiras}}
+                        <span class"help-block">{{validationErrors.leiras.msg}}</span>
+                    {{/if}}
+                </div>
+        </div>
+        <div class="form-group">
+            <div class="col-lg-10 col-lg-offset-2">
+                <!-- <button type="reset" class="btn btn-default">Mégse :c</button> -->
+                <button type="submit" class="btn btn-primary">Bejegyzés rögzítése</button>
+                <a href="./list" class="btn btn-default">Vissza a bejegyzésekhez</a>
+            </div>
+        </div>
+    </fieldset>
+</form>

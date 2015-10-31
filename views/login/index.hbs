@@ -1,0 +1,63 @@
+{{#each errorMessages}}
+<div class="alert alert-dismissible alert-danger">
+    <button type="button" class="close" data-dismiss="alert">×</button>
+    {{this}}
+</div>
+{{/each}}
+
+<style>
+    .reg-button{
+        max-width: 960px;   
+        border: 1px solid #d8d8d8;
+        padding: 11px;
+        margin: auto;
+        background: linear-gradient(#f63, #f33);
+        border-radius: 5px;
+        color: white;
+        text-decoration: none;
+        position: relative;
+    }
+    
+    a:hover{
+        text-decoration: none;
+        border-color: black;
+        color: white;
+    }
+
+</style>
+
+<div class="page-header">
+    <h1>Bejelentkezés</h1>
+</div>
+
+<form class="form-horizontal" method="post">
+    <fieldset>
+        <div class="form-group">
+            <label for="username" class="col-lg-2 control-label">Felhsználónév</label>
+            <div class="col-lg-10">
+                <input class="form-control" id="username" name="username" type="text" value="{{data.username}}">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="password" class="col-lg-2 control-label">Jelszó</label>
+            <div class="col-lg-10">
+                <input class="form-control" type="password" id="password" name="password">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-lg-10 col-lg-offset-2">
+                <button type="reset" class="btn btn-default">Mégse</button>
+                <button type="submit" class="btn btn-primary">Bejelentkezés</button>
+                <a href="/login/signup" class="reg-button">
+                    Regisztráció
+                </a>
+            </div>
+        </div>
+        <div class="form-group">
+          
+        </div>
+    </fieldset>
+</form>
+
+
+
