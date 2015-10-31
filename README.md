@@ -132,6 +132,7 @@ Bejegyzések
     + Opera v.12.1 (és későbbi)
 
 2. Telepítés lépései: 
+    Az alkalmazás elérhető a **groupnote.herokuapp.com** oldalon. Egyéb esetben:
     A GroupNote GITHub oldaláról (*https://github.com/Woaf/groupnote*) le kell tölteni a projektet,
     majd elindítani egy szervert ami futtatja a **server.js** állományt. Az alkalmazás helyes működéséhez 
     minden mappára szükség van. 
@@ -139,3 +140,4 @@ Bejegyzések
 3. Az alakalmazás elindítása után a program ugyan úgy használható, mint bármely más 
     webes alkalmazás. A szervernek **szükséges** futtatnia a server.js állományt ahhoz, hogy
     a program elérhető legyen. 
+    
