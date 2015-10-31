@@ -12,6 +12,28 @@
         "createdAt": "2015-10-31T15:13:18.116Z",
         "updatedAt": "2015-10-31T15:13:18.116Z",
         "id": 1
+      },
+      {
+        "lastname": "dio",
+        "firstname": "citrom",
+        "username": "barack",
+        "password": "$2a$10$.68qcg/6FlsKOOgaFQv4qeoRrlEqEgSWaICPXAnPyo0Biy/kpXaxK",
+        "avatar": "",
+        "role": "standard",
+        "createdAt": "2015-10-31T20:37:15.600Z",
+        "updatedAt": "2015-10-31T20:37:15.600Z",
+        "id": 2
+      },
+      {
+        "lastname": "alma",
+        "firstname": "korte",
+        "username": "dio",
+        "password": "$2a$10$xl.AevlEJXoKIrhimoijnu96ZKwnkHLsADzBotADVaFG0rG6LnOZy",
+        "avatar": "",
+        "role": "standard",
+        "createdAt": "2015-10-31T20:39:05.332Z",
+        "updatedAt": "2015-10-31T20:39:05.332Z",
+        "id": 3
       }
     ]
   },
@@ -95,10 +117,10 @@
   },
   "counters": {
     "post": {
-      "id": 1
+      "id": 4
     },
     "user": {
-      "id": 1
+      "id": 3
     }
   }
 }
