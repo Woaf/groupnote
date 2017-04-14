@@ -50,7 +50,7 @@ jelentkezve.
 
 
 ## Tervezés
-###Architektúra terv:
+### Architektúra terv:
 1. Komponens diagramm:
 ![alt text for image](/docs/komponens.png "Komponens diagramm")
 2. Oldaltérkép: 
